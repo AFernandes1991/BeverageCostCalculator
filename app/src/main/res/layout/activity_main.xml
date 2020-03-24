@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Using relative layout-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    tools:context=".MainActivity">
+    <!--creating a textview-->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:text="The Beverage"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <!--creating an edit textview-->
+    <EditText
+        android:id="@+id/tvCustName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAppName"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Name."
+        android:inputType="textPersonName" />
+
+    <!--creating a checkbox -->
+    <CheckBox
+        android:id="@+id/chkMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/chkSugar"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@id/chkSugar"
+        android:text="Milk" />
+
+    <!--creating a checkbox -->
+    <CheckBox
+        android:id="@+id/chkSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spnSize"
+        android:layout_marginStart="15dp"
+        android:text="Sugar" />
+
+    <!--creating a spinner -->
+    <Spinner
+        android:id="@+id/spnSize"
+        android:layout_width="125dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/rdgBeverage"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toRightOf="@id/tvSize" />
+
+    <!--creating a radio group-->
+    <RadioGroup
+        android:id="@+id/rdgFlavor"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFlavors"
+        android:layout_marginStart="15dp">
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdNone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" None" />
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdLemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lemon" />
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdMint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mint" />
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdVani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vanilla" />
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdChoco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate" />
+
+    </RadioGroup>
+
+    <!--creating a radio group-->
+    <RadioGroup
+        android:id="@+id/rdgBeverage"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/actvProvince"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tvBeverage"
+        android:orientation="horizontal">
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Tea" />
+
+        <!--creating a radio buttons-->
+        <RadioButton
+            android:id="@+id/rdCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Coffee" />
+    </RadioGroup>
+
+    <!--creating a textview-->
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/spnSize"
+        android:layout_marginLeft="15dp"
+        android:text="Select Size: " />
+
+    <!--creating a textview-->
+    <TextView
+        android:id="@+id/tvBeverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rdgBeverage"
+        android:layout_marginLeft="15dp"
+        android:text="Select Beverage: " />
+
+    <!--creating a textview-->
+    <TextView
+        android:id="@+id/tvFlavors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkMilk"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Flavoring:" />
+
+    <!--creating an autocomplete textview-->
+    <AutoCompleteTextView
+        android:id="@+id/actvProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvCustName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tvCustName"
+        android:hint="Select Province"
+        android:textSize="18sp" />
+
+    <!--creating a button-->
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdgFlavor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Order" />
+
+</RelativeLayout>
